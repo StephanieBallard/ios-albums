@@ -17,6 +17,8 @@
 		5AC8D2382464ACD400D77FF0 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8D2372464ACD400D77FF0 /* SongTableViewCell.swift */; };
 		5AC8D23A2464D98700D77FF0 /* exampleAlbum.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AC8D2392464D98600D77FF0 /* exampleAlbum.json */; };
 		5AC8D23C2464E1BF00D77FF0 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8D23B2464E1BF00D77FF0 /* Album.swift */; };
+		5AC8D23E2464E8A100D77FF0 /* AlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8D23D2464E8A100D77FF0 /* AlbumController.swift */; };
+		5AC8D2402465372600D77FF0 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AC8D23F2465372600D77FF0 /* GoogleService-Info-2.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		5AC8D2372464ACD400D77FF0 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		5AC8D2392464D98600D77FF0 /* exampleAlbum.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = exampleAlbum.json; path = ../../exampleAlbum.json; sourceTree = "<group>"; };
 		5AC8D23B2464E1BF00D77FF0 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		5AC8D23D2464E8A100D77FF0 /* AlbumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumController.swift; sourceTree = "<group>"; };
+		5AC8D23F2465372600D77FF0 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +72,12 @@
 				5AC8D2212464A02A00D77FF0 /* SceneDelegate.swift */,
 				5AC8D2252464A02A00D77FF0 /* Main.storyboard */,
 				5AC8D23B2464E1BF00D77FF0 /* Album.swift */,
+				5AC8D23D2464E8A100D77FF0 /* AlbumController.swift */,
 				5AC8D2352464A70D00D77FF0 /* AlbumDetailTableViewController.swift */,
 				5AC8D2372464ACD400D77FF0 /* SongTableViewCell.swift */,
 				5AC8D2332464A40600D77FF0 /* AlbumsTableViewController.swift */,
 				5AC8D2282464A02C00D77FF0 /* Assets.xcassets */,
+				5AC8D23F2465372600D77FF0 /* GoogleService-Info-2.plist */,
 				5AC8D22A2464A02C00D77FF0 /* LaunchScreen.storyboard */,
 				5AC8D22D2464A02C00D77FF0 /* Info.plist */,
 				5AC8D2392464D98600D77FF0 /* exampleAlbum.json */,
@@ -137,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AC8D2402465372600D77FF0 /* GoogleService-Info-2.plist in Resources */,
 				5AC8D22C2464A02C00D77FF0 /* LaunchScreen.storyboard in Resources */,
 				5AC8D2292464A02C00D77FF0 /* Assets.xcassets in Resources */,
 				5AC8D23A2464D98700D77FF0 /* exampleAlbum.json in Resources */,
@@ -155,6 +162,7 @@
 				5AC8D2342464A40600D77FF0 /* AlbumsTableViewController.swift in Sources */,
 				5AC8D2382464ACD400D77FF0 /* SongTableViewCell.swift in Sources */,
 				5AC8D2362464A70D00D77FF0 /* AlbumDetailTableViewController.swift in Sources */,
+				5AC8D23E2464E8A100D77FF0 /* AlbumController.swift in Sources */,
 				5AC8D2222464A02A00D77FF0 /* SceneDelegate.swift in Sources */,
 				5AC8D23C2464E1BF00D77FF0 /* Album.swift in Sources */,
 			);

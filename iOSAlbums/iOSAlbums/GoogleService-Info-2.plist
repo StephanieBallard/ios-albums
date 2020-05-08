@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>340463025749-u9o5uad30kho0t6ter9iki9296oresje.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.340463025749-u9o5uad30kho0t6ter9iki9296oresje</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCi6pg9zMcSqKVD5F-RlnzG8Oe9ABs7SPw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>340463025749</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.StephanieBallard.iOSAlbums</string>
+	<key>PROJECT_ID</key>
+	<string>albums-4d36d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>albums-4d36d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:340463025749:ios:288d80a489286257651edc</string>
+	<key>DATABASE_URL</key>
+	<string>https://albums-4d36d.firebaseio.com</string>
+</dict>
+</plist>

@@ -10,14 +10,13 @@ import UIKit
 
 class AlbumsTableViewController: UITableViewController {
 
+    var albumController: AlbumController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+//      TODO: call the getAlbums method of the albumController. Reload the table view in its completion closure.
+        albumController?.getAlbums()
     }
 
     // MARK: - Table view data source
