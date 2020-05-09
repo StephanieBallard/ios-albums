@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Album: Codable {
     var artist: String
@@ -16,7 +17,7 @@ struct Album: Codable {
     var genres: [String]
     var songs: [Song]
 
-    enum AlbumKeys: String, CodingKey {
+    enum AlbumCodingKeys: String, CodingKey {
         case artist
         case coverArt
         case genres
@@ -24,34 +25,64 @@ struct Album: Codable {
         case name
         case songs
 
-        enum GenresKeys: String, CodingKey {
-            case genres
+        enum CoverArtCodingKeys: String, CodingKey {
+            case url
         }
     }
 
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: AlbumKeys.self)
+        let container = try decoder.container(keyedBy: AlbumCodingKeys.self)
         artist = try container.decode(String.self, forKey: .artist)
         id = try container.decode(String.self, forKey: .id)
         name = try container.decode(String.self, forKey: .name)
-
-        var genresContainer = try container.nestedUnkeyedContainer(forKey: .genres)
-        var genreNames: [String] = []
-
-        while genresContainer.isAtEnd == false {
-            let genreContainer = try genresContainer.nestedContainer(keyedBy: CodingKeys.GenresKeys.self)
-
+        genres = try container.decode([String].self, forKey: .genres)
+        songs = try container.decodeIfPresent([Song].self, forKey: .songs) ?? []
+        
+        var coverArtContainer = try container.nestedUnkeyedContainer(forKey: .coverArt)
+        var coverArtURLS = [URL]()
+        
+        while !coverArtContainer.isAtEnd {
+            let coverArtContentContainer = try coverArtContainer.nestedContainer(keyedBy: AlbumCodingKeys.CoverArtCodingKeys.self)
+            let urlString = try coverArtContentContainer.decode(String.self, forKey: .url)
+            if let url = URL(string: urlString) {
+                coverArtURLS.append(url)
+            }
         }
-
-
+        self.coverArt = coverArtURLS
+        }
     }
-}
-
 
 struct Song: Codable {
     var duration: String
     var id: String
     var name: String
+    
+    enum SongCodingKeys: String, CodingKey {
+        case duration
+        case name
+        case id
+    
+        enum NameCodingKeys: String, CodingKey {
+            case title
+        }
+        
+        enum DurationCodingKeys: String, CodingKey {
+            case duration
+        }
+        
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: SongCodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        
+        let durationContainer = try container.nestedContainer(keyedBy: SongCodingKeys.DurationCodingKeys.self, forKey: .duration)
+        duration = try durationContainer.decode(String.self, forKey: .duration)
+        
+        let nameContainer = try container.nestedContainer(keyedBy: SongCodingKeys.NameCodingKeys.self, forKey: .name)
+        name = try nameContainer.decode(String.self, forKey: .title)
+        
+    }
 }
 
 
